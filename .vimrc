@@ -46,5 +46,12 @@ hi CursorLineNR ctermbg=NONE
 " colorscheme
 
 " whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " whitespace
+
+
+" keybinds
+let mapleader = " " 
+nnoremap <leader>s :source %<Cr>
+nnoremap <leader>r :!clear; and python3 %<Cr>
+" keybinds
