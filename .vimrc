@@ -30,6 +30,8 @@ set noswapfile "no swap
 set nobackup
 set incsearch "realtime searching
 
+set clipboard=unnamedplus "vim yank to clipboard
+
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 " uiuiui
