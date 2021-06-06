@@ -51,9 +51,13 @@ hi CursorLineNR ctermbg=NONE
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " whitespace
 
-
+"this is to remap a leader key to add more shortcuts
 " keybinds
 let mapleader = " " 
 nnoremap <leader>s :source %<Cr>
-nnoremap <leader>r :!clear; and python3 %<Cr>
+"this is to bash↓
+nnoremap <leader>r :!clear && python3 %<Cr>
+"this is to fish↓
+"nnoremap <leader>r :!clear; and python3 %<Cr>
+"
 " keybinds
