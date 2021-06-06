@@ -8,6 +8,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim' " required
 Plugin 'lifepillar/vim-gruvbox8' "colorscheme
 Plugin 'Valloric/YouCompleteMe.git' "autocomplete
+Plugin 'jiangmiao/auto-pairs' "autopair to () and more
+
 " Plugins ↑ 
 
 call vundle#end()            " required
@@ -32,9 +34,9 @@ set incsearch "realtime searching
 
 set clipboard=unnamedplus "vim yank to clipboard
 
+"gray line at 80char 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-" uiuiui
 
 " colorscheme
 set background=dark
@@ -47,17 +49,43 @@ hi CursorLineNR ctermbg=NONE
     "cursorColors
 " colorscheme
 
+"autopair↓
+let g:AutoPairsFlyMode = 1
+"autopair
+
 " whitespace
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " whitespace
 
-"this is to remap a leader key to add more shortcuts
+"this↓ is to remap a leader key to add more shortcuts
 " keybinds
 let mapleader = " " 
 nnoremap <leader>s :source %<Cr>
+
+"run *.py .
+
 "this is to bash↓
-nnoremap <leader>r :!clear && python3 %<Cr>
+"nnoremap <leader>r :!clear && python3 %<Cr>
+
 "this is to fish↓
-"nnoremap <leader>r :!clear; and python3 %<Cr>
-"
-" keybinds
+nnoremap <leader>r :!clear; and python3 %<Cr>
+
+"run *.py .
+
+
+"navigation files shortcuts
+
+"open de file tree .
+nnoremap <leader>e :e . <Cr>
+
+"create a new tab
+nnoremap <leader>tn :tabnew <Cr>
+
+"next tab
+nnoremap <leader>tk :tabnext <Cr>
+
+"next tab
+nnoremap <leader>tj :tabprevious <Cr>
+
+"navigation files shortcuts
+"keybinds
