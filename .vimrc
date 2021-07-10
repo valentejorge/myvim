@@ -9,6 +9,9 @@ Plugin 'gmarik/Vundle.vim' " required
 Plugin 'lifepillar/vim-gruvbox8' "colorscheme
 Plugin 'Valloric/YouCompleteMe.git' "autocomplete
 Plugin 'jiangmiao/auto-pairs' "autopair to () and more
+Plugin 'preservim/nerdtree' "NerdTree
+Plugin 'ryanoasis/vim-devicons' "Icons for NerdTree
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' "read the name
 
 " Plugins ↑ 
 
@@ -20,7 +23,7 @@ filetype plugin indent on    " required
 " uiuiui
 syntax on "turn on the syntaxhighlight
 set backspace=indent,eol,start
-set encoding=utf-8
+set encoding=UTF-8
 set tabstop=4 softtabstop=4 "one tab = four spaces
 set shiftwidth=4 ">> = to four right cases
 set expandtab "convert tab character to spaces
@@ -49,6 +52,9 @@ hi CursorLineNR ctermbg=NONE
     "cursorColors
 " colorscheme
 
+"font
+set guifont=*
+
 "autopair↓
 let g:AutoPairsFlyMode = 1
 "autopair
@@ -71,21 +77,16 @@ nnoremap <leader>s :source %<Cr>
 nnoremap <leader>r :!clear; and python3 %<Cr>
 
 "run *.py .
-
-
-"navigation files shortcuts
-
-"open de file tree .
-nnoremap <leader>e :e . <Cr>
-
-"create a new tab
-nnoremap <leader>tn :tabnew <Cr>
-
-"next tab
-nnoremap <leader>tk :tabnext <Cr>
-
-"next tab
-nnoremap <leader>tj :tabprevious <Cr>
-
-"navigation files shortcuts
 "keybinds
+
+
+
+"NerdTree
+
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '►'
+let g:NERDTreeDirArrowCollapsible = '▼'
+let NERDTreeShowLineNumbers=1
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI = 1
+let g:NERDTreeWinSize=28
