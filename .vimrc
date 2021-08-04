@@ -68,15 +68,25 @@ let g:AutoPairsFlyMode = 1
 let mapleader = " " 
 nnoremap <leader>s :source %<Cr>
 
-"run *.py .
+nnoremap <leader>; A;<Esc>
+nnoremap <leader>: A:<Esc>
 
-"this is to bash↓
+"run *.py .
+        "this is to bash↓
 "nnoremap <leader>r :!clear && python3 %<Cr>
 
-"this is to fish↓
+        "this is to fish↓
 nnoremap <leader>r :!clear; and python3 %<Cr>
-
 "run *.py .
+
+
+"move text lines
+vnoremap J :m '>+1<Cr>gv=gv
+vnoremap K :m '>-2<Cr>gv=gv
+"move text lines
+
+
+
 "keybinds
 
 
